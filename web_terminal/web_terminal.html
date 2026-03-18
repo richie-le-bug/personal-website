@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪲 Terminal</title>
+    <link rel="stylesheet" href="web_terminal_styles.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../projects/projects.html" class="nav-link">Projects</a>
+        <a href="../contact/contact.html" class="nav-link">Contact</a>
+        <a href="web_terminal.html" class="nav-link current">Web_Terminal</a>
+    </div>
+
+    <div class="terminal" id="terminal">
+        <!-- ASCII Art Banner -->
+        <pre id="banner">  
+                           ___________________   
+            /(   )\       |  Hi, visitor@web  |
+            \(   )/       |_  ________________| 
+       ..    \\_//    ..    |/
+       //   _0.-.0_   \\
+       \'._/       \_.'/
+        '-.\.--.--./.-'
+        __/ : :Y: : \__
+';,  .-(_| : : | : : |_)-.  ,:'
+  \\/.'  |: : :|: : :|  '.\//
+   (/    |: : :|: : :|    \)
+         |: : :|: : :;
+        /\ : : | : : /\
+       (_/'.: :.: :.'\_)
+        \\  '"'""'   //
+         \\         //
+          ':.     .:'
+</pre>
+
+        <!-- Terminal content will be generated here -->
+        <div class="terminal-content" id="terminal-content">
+            <div class="command-line">
+                <div class="prompt">
+                    <span class="user">visitor@web</span>:<span class="path">~/terminal</span><span class="cursor">$</span>
+                </div>
+                <input type="text" id="command-input" class="prompt" autocomplete="off" spellcheck="false" placeholder="Type 'help' for available commands">
+            </div>
+        </div>
+    </div>
+
+    <script src="web_terminal_script.js"></script>
+</body>
+</html>

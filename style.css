@@ -1,0 +1,300 @@
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling on entire body */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Minecraft'; 
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Top Navigation Bar */
+.header {
+    background: #f5f5f5ab;
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 2px solid #ddd; /* Divider for top bar */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Background Image Container */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places it behind all content */
+    background-image: url('/images/IMG_7456.jpg'); /* Replace with your image path */
+    background-size: cover; /* Covers entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps it fixed while scrolling */
+}
+
+#nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 8rem; /* Adjusted spacing */
+}
+
+#nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px; /* Pixel font spacing */
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: blue;
+}
+
+/* Current page highlight effect */
+#nav-links a.current {
+    color: blue;
+}
+
+#nav-links a.current::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+/* Main Content - Fill remaining space */
+.bug-banner {
+    padding-bottom: 1rem;
+    background-image: url('path/to/your/animation.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    min-height: 20px;
+}
+.bug-image {
+    max-width: 100%;     /* Responsive - never wider than container */
+    height: auto;        /* Maintain aspect ratio */
+    width: 30rem;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    overflow: hidden; /* Prevent internal scrolling */
+}
+
+/* Scroll Panel - Centered and scrollable */
+.scroll-panel {
+    width: 70%; /* 70% width as requested */
+    max-height: 90vh; /* Limit height to viewport with some margin */
+    background: #FCF8ED;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    overflow-y: auto; /* Make it vertically scrollable */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 13rem; /* Internal padding */
+    padding-top: 7rem;
+}
+
+/* Content container inside scroll-panel */
+.content-container {
+    max-width: 800px; /* Control the max width of text content */
+    margin: 0 auto; /* This centers the container horizontally */
+    text-align: left; /* This keeps text left-aligned */
+}
+
+/* Custom scrollbar for scroll panel */
+.scroll-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-panel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* For Firefox */
+.scroll-panel {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
+}
+
+/* About & CV Sections */
+.about-section {
+    margin-bottom: 2rem;
+}
+
+/* Typography with pixel font style */
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Links styling */
+.cv-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.cv-link:hover {
+    text-decoration: underline;
+}
+
+/* Social links container */
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: blue;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Services list styling */
+.services-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.services-list li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.services-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: blue;
+}
+
+/* Optional: Image container inside scroll panel */
+.image-container {
+    text-align: center; /* Center the image */
+    margin: 2rem 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #nav-links {
+            gap: 4rem;
+    }
+    
+    .scroll-panel {
+            width: 85%; /* Wider on smaller screens */
+    }
+    
+.content-container {
+    max-width: 90%; /* Adjust max-width on tablets */
+}
+        }
+
+        @media (max-width: 768px) {
+#nav-links {
+    gap: 2rem;
+}
+
+.scroll-panel {
+    width: 95%; /* Nearly full width on mobile */
+    padding: 1rem;
+    max-height: 85vh;
+}
+
+.main-content {
+    padding: 1rem;
+}
+
+.content-container {
+    max-width: 95%;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+.social-links a {
+    display: block; /* Stack links on mobile */
+    margin-right: 0;
+}
+}

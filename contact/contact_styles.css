@@ -1,0 +1,82 @@
+/* Import Minecraft font */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fonts/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Minecraft";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #FCF8ED;
+    }
+
+/* Top Navigation Bar */
+.header {
+    background: #f5f5f552;
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 2px solid #ddd; /* Divider for top bar */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+#nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 8rem; /* Adjusted spacing */
+}
+
+#nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px; /* Pixel font spacing */
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: blue;
+}
+
+/* Current page highlight effect */
+#nav-links a.current {
+    color: blue;
+}
+
+#nav-links a.current::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.mail {
+    justify-content: center;
+    align-items: center;
+    background: #FCF8ED;
+    font-size: 1.7rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-wrap: nowrap;
+    text-decoration: none;
+}
+
+.mail :hover {
+    color: blue;
+}
