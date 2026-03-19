@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Minecraft';
     src: url('fonts/Minecraft.ttf') format('truetype');
@@ -54,7 +53,10 @@ body {
 #nav-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 8rem; /* Adjusted spacing */
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
+    padding: 0 1rem; /* Add some padding on sides */
 }
 
 #nav-links a {
@@ -66,6 +68,7 @@ body {
     padding: 0.5rem 1rem;
     position: relative;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping inside buttons */
 }
 
 #nav-links a:hover {
@@ -252,49 +255,126 @@ p {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    #nav-links {
+        gap: 6rem;
+    }
+}
+
 @media (max-width: 1024px) {
     #nav-links {
-            gap: 4rem;
+        gap: 4rem;
     }
     
     .scroll-panel {
-            width: 85%; /* Wider on smaller screens */
+        width: 85%; /* Wider on smaller screens */
     }
     
-.content-container {
-    max-width: 90%; /* Adjust max-width on tablets */
-}
-        }
-
-        @media (max-width: 768px) {
-#nav-links {
-    gap: 2rem;
+    .content-container {
+        max-width: 90%; /* Adjust max-width on tablets */
+    }
 }
 
-.scroll-panel {
-    width: 95%; /* Nearly full width on mobile */
-    padding: 1rem;
-    max-height: 85vh;
+@media (max-width: 768px) {
+    #nav-links {
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    #nav-links a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    #nav-links a.current::after {
+        bottom: -6px;
+        width: 6px;
+        height: 6px;
+    }
+    
+    .scroll-panel {
+        width: 95%; /* Nearly full width on mobile */
+        padding: 1rem;
+        max-height: 85vh;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .content-container {
+        max-width: 95%;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+    
+    .social-links a {
+        display: block; /* Stack links on mobile */
+        margin-right: 0;
+    }
 }
 
-.main-content {
-    padding: 1rem;
+/* Additional breakpoint for very small phones */
+@media (max-width: 480px) {
+    #nav-links {
+        gap: 0.8rem;
+        flex-direction: row; /* Keep horizontal but tighter */
+        justify-content: center;
+        padding: 0 0.25rem;
+    }
+    
+    #nav-links a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+        letter-spacing: 0.3px;
+    }
+    
+    #nav-links a.current::after {
+        bottom: -4px;
+        width: 4px;
+        height: 4px;
+    }
+    
+    .header {
+        padding: 0.7rem 0;
+    }
 }
 
-.content-container {
-    max-width: 95%;
+/* Ultra small screens (like foldables) */
+@media (max-width: 360px) {
+    #nav-links {
+        gap: 0.5rem;
+    }
+    
+    #nav-links a {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.4rem;
+    }
+    
+    .header {
+        padding: 0.5rem 0;
+    }
 }
 
-h3 {
-    font-size: 1.2rem;
-}
-
-h4 {
-    font-size: 1rem;
-}
-
-.social-links a {
-    display: block; /* Stack links on mobile */
-    margin-right: 0;
-}
+/* Landscape mode on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 0.5rem 0;
+    }
+    
+    #nav-links a {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    #nav-links a.current::after {
+        bottom: -3px;
+    }
 }

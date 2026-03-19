@@ -80,3 +80,120 @@ body {
 .mail :hover {
     color: blue;
 }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #nav-links {
+        gap: 6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    #nav-links {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    #nav-links a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    #nav-links a.current::after {
+        bottom: -6px;
+        width: 6px;
+        height: 6px;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Additional breakpoint for very small phones */
+@media (max-width: 480px) {
+    #nav-links {
+        gap: 0.8rem;
+        flex-direction: row; /* Keep horizontal but tighter */
+        justify-content: center;
+        padding: 0 0.25rem;
+    }
+    
+    #nav-links a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+        letter-spacing: 0.3px;
+    }
+    
+    #nav-links a.current::after {
+        bottom: -4px;
+        width: 4px;
+        height: 4px;
+    }
+    
+    .header {
+        padding: 0.7rem 0;
+    }
+}
+
+/* Ultra small screens (like foldables) */
+@media (max-width: 360px) {
+    #nav-links {
+        gap: 0.5rem;
+    }
+    
+    #nav-links a {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.4rem;
+    }
+    
+    .header {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Landscape mode on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 0.5rem 0;
+    }
+    
+    #nav-links a {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    #nav-links a.current::after {
+        bottom: -3px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mail {
+        padding: 1rem 0.5rem;  
+        font-size: 0.9rem;      /* Smaller font size */
+        word-break: break-all;   /* Force long email to break */
+        text-align: center;
+        white-space: normal;     /* Allow text to wrap */
+        line-height: 1.3;
+    }
+}
+
+/* For very small phones */
+@media screen and (max-width: 480px) {
+    .mail {
+        padding: 0.8rem 0.3rem;
+        font-size: 0.8rem;
+    }
+}
