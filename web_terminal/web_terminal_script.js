@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     description: "Display information about me",
                     execute: () => {
                         return `Richard Ericsson - Data Analyst & Developer\n` +
-                               `"I'm a Programmer with background in Data analysis and Product Design <br>skilled in coding and command-line tools. I combine design thinking with technical analysis<br>to explore web qualities and build efficient data collection systems that gather different<br>sources of data to one place for clearer analysis. Python, SQL and Git are my main tools <br>but I can manage HTML and JavaScript".`;
+                               `I'm a Programmer with background in Data analysis and Product Design <br>skilled in coding and command-line tools. I combine design thinking with technical analysis<br>to explore web qualities and build efficient data collection systems that gather different<br>sources of data to one place for clearer analysis. Python, SQL and Git are my main tools <br>but I can manage HTML and JavaScript.`;
                     }
                 },
                 date: {
