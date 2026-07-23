@@ -9,22 +9,18 @@
 <body>
 
     <div class="background-image"></div>
-    
+
     <div id="header" class="header">
         <div id="nav-bar">
             <div id="nav-links">
                 <a href="../index.html">Home</a>
-                <a href="projects.html" class="current">Projects</a> <!-- Current page highlighted -->
+                <a href="projects.html" class="current">Projects</a>
                 <a href="../contact/contact.html">Contact</a>
                 <a href="../web_terminal/web_terminal.html">Web_Terminal</a>
             </div>
         </div>
     </div>
 
-    <!-- Optional: Add a page title -->
-    <!-- <h1 class="page-title">Projects</h1> -->
-
-    <!-- Table container for horizontal scroll on mobile -->
     <div class="main-content">
         <div class="table-container">
         <table>
@@ -38,44 +34,121 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="project-row" id="project1">
                     <td>Generator customisation tool</td>
                     <td>Svenska Kraftprodukterna AB</td>
                     <td>Customisation software for electrical generators</td>
                     <td>2025</td>
                     <td>Completed</td>
                 </tr>
-                <tr>
+                <tr class="expandable-content" id="expand-project1">
+                    <td colspan="5">
+                        <div class="expandable-inner">
+                            <img src="path/to/project1-image.jpg" alt="Project 1 Image" class="project-image">
+                            <div class="project-details">
+                                <h3>Additional Details</h3>
+                                <p>This project involved creating a comprehensive customization tool for electrical generators. The software allows users to configure various parameters and visualize the results in real-time.</p>
+                                <ul>
+                                    <li>Technologies used: Python, Qt, OpenGL</li>
+                                    <li>Team size: 4 developers</li>
+                                    <li>Duration: 8 months</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="project-row" id="project2">
                     <td>Geographical 3D barplot visualization</td>
                     <td>-</td>
                     <td>Software that generates 3D visualizations for geographical data</td>
                     <td>2025</td>
                     <td>In Progress</td>
                 </tr>
-                <tr>
+                <tr class="expandable-content" id="expand-project2">
+                    <td colspan="5">
+                        <div class="expandable-inner">
+                            <img src="path/to/project2-image.jpg" alt="Project 2 Image" class="project-image">
+                            <div class="project-details">
+                                <h3>Additional Details</h3>
+                                <p>Interactive 3D visualization tool for geographical data analysis. Currently in development with planned features for real-time data updates.</p>
+                                <ul>
+                                    <li>Technologies used: Three.js, D3.js, Python</li>
+                                    <li>Status: Beta testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="project-row" id="project3">
                     <td>UI for the TERRA GPS</td>
                     <td>-</td>
                     <td>-</td>
                     <td>2024</td>
                     <td>Confidential</td>
                 </tr>
-                <tr>
+                <tr class="expandable-content" id="expand-project3">
+                    <td colspan="5">
+                        <div class="expandable-inner">
+                            <img src="path/to/project3-image.jpg" alt="Project 3 Image" class="project-image">
+                            <div class="project-details">
+                                <h3>Additional Details</h3>
+                                <p>User interface design for the TERRA GPS system. Due to confidentiality, specific details cannot be disclosed.</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="project-row" id="project4">
                     <td>Focussino the LLM pet</td>
                     <td>-</td>
                     <td>-</td>
                     <td>2024</td>
                     <td>In Progress</td>
                 </tr>
-                <tr>
+                <tr class="expandable-content" id="expand-project4">
+                    <td colspan="5">
+                        <div class="expandable-inner">
+                            <img src="path/to/project4-image.jpg" alt="Project 4 Image" class="project-image">
+                            <div class="project-details">
+                                <h3>Additional Details</h3>
+                                <p>An interactive LLM-based virtual pet that learns and adapts to user interactions. Currently being developed with a focus on natural language processing.</p>
+                                <ul>
+                                    <li>Technologies used: Python, PyTorch, React</li>
+                                    <li>Features: Voice interaction, emotion simulation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="project-row" id="project5">
                     <td>Data scrapper</td>
                     <td>-</td>
                     <td>A tool for market pricing analysis</td>
                     <td>2024</td>
                     <td>Completed</td>
                 </tr>
+                <tr class="expandable-content" id="expand-project5">
+                    <td colspan="5">
+                        <div class="expandable-inner">
+                            <img src="path/to/project5-image.jpg" alt="Project 5 Image" class="project-image">
+                            <div class="project-details">
+                                <h3>Additional Details</h3>
+                                <p>Automated data scraping tool for market pricing analysis. Successfully deployed and used by the analytics team.</p>
+                                <ul>
+                                    <li>Technologies used: Python, BeautifulSoup, Selenium</li>
+                                    <li>Outcome: 40% reduction in data collection time</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
     </div>
+  <script src="projects_script.js"></script>
 </body>
 </html>
