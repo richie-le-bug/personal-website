@@ -293,6 +293,11 @@ p {
         height: 6px;
     }
     
+    /* HIDE TERMINAL LINK ON MOBILE */
+    .terminal-link {
+        display: none !important;
+    }
+    
     .scroll-panel {
         width: 95%; /* Nearly full width on mobile */
         padding: 1rem;

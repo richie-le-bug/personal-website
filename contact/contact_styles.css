@@ -197,3 +197,5 @@ body {
         font-size: 0.8rem;
     }
 }
+
+.terminal-link { display: none !important; } inside the @media (max-width: 768px)

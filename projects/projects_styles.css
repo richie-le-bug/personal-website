@@ -333,3 +333,5 @@ td:last-child {
 .project-row {
     transition: background-color 0.2s ease;
 }
+
+.terminal-link { display: none !important; } inside the @media (max-width: 768px)
