@@ -208,19 +208,30 @@ p {
 
 /* Social links container */
 .social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;          /* Allows wrapping on small screens */
+    align-items: center;
+    gap: 2rem;                /* Space between each social link */
     margin-bottom: 1.5rem;
 }
 
 .social-links a {
+    display: inline-flex;     /* Keeps logo + text on one line, side-by-side */
+    align-items: center;
+    gap: 0.5rem;              /* Space between logo and text */
     color: blue;
     text-decoration: none;
-    display: inline-block;
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
+    margin: 0;                /* Remove old margin-bottom */
 }
 
 .social-links a:hover {
     text-decoration: underline;
+}
+
+.social-logo {
+    width: 20px;
+    height: auto;
 }
 
 /* Services list styling */
