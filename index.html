@@ -18,7 +18,6 @@
                 <a class="current" href="index.html">Home</a> <!-- Current page highlighted -->
                 <a href="projects/projects.html">Projects</a>
                 <a href="contact/contact.html">Contact</a>
-                <a href="web_terminal/web_terminal.html" class="terminal-link">Web_Terminal</a>
             </div>
         </div>
     </div>
@@ -29,10 +28,47 @@
             <!-- Content container for centering with left alignment -->
             <div class="content-container">
 
-                <div class="bug-banner" alt="bug ascii"> <!-- Placeholder for bug animation/banner -->
-                    <img src="images/giffycanvas.gif" alt="Bug animation" class="bug-image">
-                </div>
+                <div class="bug-banner" id="bug-trigger" title="Click me!">
+    <!-- The bug image (visible by default) -->
+    <img src="images/giffycanvas.gif" alt="Bug animation" class="bug-image" id="bug-image">
 
+    <!-- The inline terminal (hidden by default, shown when clicked) -->
+    <div class="inline-terminal" id="inline-terminal" hidden>
+        <button class="terminal-close" id="terminal-close" aria-label="Close terminal">✕</button>
+        <div class="crt">
+            <div class="terminal" id="terminal">
+                <pre id="banner">  
+                           _________________________________________________   
+            /(   )\       |                                                 | 
+            \(   )/       |   Hi visitor@web — type 'help' to get started   |
+       ..    \\_//    ..  |_  ______________________________________________/
+       //   _0.-.0_   \\    |/
+       \'._/       \_.'/
+        '-.\.--.--./.-'
+        __/ : :Y: : \__
+';,  .-(_| : : | : : |_)-.  ,:'
+  \\/.'  |: : :|: : :|  '.\//
+   (/    |: : :|: : :|    \)
+         |: : :|: : :;
+        /\ : : | : : /\
+       (_/'.: :.: :.'\_)
+        \\  '"'""'   //
+         \\         //
+          ':.     .:'
+</pre>
+
+                <div class="terminal-content" id="terminal-content">
+                    <div class="command-line">
+                        <div class="prompt">
+                            <span class="user">visitor@web</span>:<span class="path">~/terminal</span><span class="cursor">$</span>
+                        </div>
+                        <input type="text" id="command-input" autocomplete="off" spellcheck="false" placeholder="Type 'help' for available commands">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <div class="about-section">
                     <h3>About</h3>
@@ -96,7 +132,7 @@
             </div>
         </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
